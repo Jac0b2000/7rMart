@@ -32,7 +32,7 @@ public class ManageDeliveryBoyPage {
 	}
 	
 	public void enterPhoneNumberonPhoneNumberField(String phoneNumber) {
-		phoneNumberField.sendKeys(phoneNumber);
+		phoneNumberField.sendKeys(String.valueOf(phoneNumber));
 	}
 	
 	public void clickOnFinalSearchButton() {

@@ -7,18 +7,19 @@ import org.testng.annotations.Test;
 import pages.LoginPage;
 import pages.ManageDeliveryBoyPage;
 import pages.MenuPage;
+import utilities.ExcelUtility;
 
 public class ManageDeliveryBoyTest extends Base {
 		
 	@Test
 	public void verifyWhenUserSearchDeliveryBoyUsingCredentialsItDisplaysDetailsOfCorrespondingDeliveryBoy() {
-		String username = "admin";
-		String password = "admin";
-		String name = "Rahul";
-		String email = "Reinhold@gmail.com";
-		String phoneNumber = "7510982684";
+		String username = ExcelUtility.getString(1, 0, "LoginPage");
+		String password = ExcelUtility.getString(1, 1, "LoginPage");
+		String name = ExcelUtility.getString(1, 0, "ManageDeliveryBoyPage");
+		String email = ExcelUtility.getString(1, 1, "ManageDeliveryBoyPage");
+		String phoneNumber = ExcelUtility.getInt(1, 2, "ManageDeliveryBoyPage");
 		
-		String menu = "Manage Delivery Boy";
+		String menu = ExcelUtility.getString(8, 0, "MenuPage");
 		
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUsernameOnUsernameField(username);

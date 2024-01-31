@@ -20,7 +20,7 @@ public class MenuPage {
 	
 	@FindBy(xpath = "//div[contains(@class,'small')]//child::div[@class='inner']") List<WebElement> menuItems;
 	@FindBy(xpath = "//a[@class='small-box-footer']") List<WebElement> menuItemsLink;
-	
+	@FindBy(xpath ="//h1[text()='List Orders']")WebElement itemHeading;
 	public void clickOnMenuItems(String menuToBeClicked) {
 		int menuIndex;
 		for (WebElement menuItem : menuItems) {
@@ -28,11 +28,11 @@ public class MenuPage {
 			if(menuIndex!=-1 && menuItem.getText().contains(menuToBeClicked)) {
 				menuItemsLink.get(menuIndex).click();
 				break;
-			} 
-		}	
+			}
+		}
 	}
-	//public void dummmyMethod(WebElement element, int index) {
-	//	pageutilities = new PageUtilitiy();
-	//	pageutilities.selectValueUsingSelectByIndex(element, index);
-	//}
+	public boolean isCorrespondingPageDisplayed() {
+		return itemHeading.isDisplayed();
+	}
+	
 }

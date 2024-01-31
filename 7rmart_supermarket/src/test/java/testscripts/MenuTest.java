@@ -19,6 +19,6 @@ public class MenuTest extends Base {
 		MenuPage menupage = new MenuPage(driver);
 		menupage.clickOnMenuItems(menu);
 		
-		
+		//give assert
 	}
 }

@@ -15,6 +15,7 @@ public class LoginPage {
 	@FindBy(xpath="//input[@placeholder='Password']") WebElement passwordField;
 	@FindBy(xpath="//button[@type='submit']") WebElement signInButton;
 	@FindBy(xpath="//a[@class=' nav-link']//i[@class='nav-icon sidebar-item-icon fa fa-cog']") WebElement settingsButton;
+	@FindBy(xpath ="//div[@class='alert alert-danger alert-dismissible']")WebElement alertPopup;
 	
 	public void enterUsernameOnUsernameField(String username) {
 		usernameField.sendKeys(username);
@@ -28,5 +29,10 @@ public class LoginPage {
 	public boolean isSettingsButtonAvailable() {
 		return settingsButton.isDisplayed();
 	}
+	public boolean isAlertPopupDisplayed() {
+		return alertPopup.isDisplayed();
+	}
 }
+	
+	
 

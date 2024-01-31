@@ -39,5 +39,4 @@ public class AdminUsersPage {
 	public boolean isUserCreationSuccessAlertShown() {
 		return alertMessegeField.isDisplayed();
 	}
-	//
 }

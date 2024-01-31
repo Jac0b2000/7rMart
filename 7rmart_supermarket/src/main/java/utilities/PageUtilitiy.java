@@ -1,6 +1,9 @@
 package utilities;
 
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 public class PageUtilitiy {
@@ -9,9 +12,55 @@ public class PageUtilitiy {
 		Select select = new Select(element);
 		select.selectByIndex(index);
 	}
-	
 	public void selectValueUsingSelectByVisibleText(WebElement element, String visibleText) {
 		Select select = new Select(element);
 		select.selectByVisibleText(visibleText);
 	}
+	public void selectValueUsingSelectByValue(WebElement element, String value)
+	{
+		Select select = new Select(element);
+		select.selectByValue(value);
+	}
+	public void doubleClick(WebElement targetItem, WebDriver driver)
+	{
+		Actions actions = new Actions(driver);
+		actions.doubleClick(targetItem).build().perform();
+	}
+	public void rightClick(WebElement targetItem, WebDriver driver)
+	{
+		Actions actions = new Actions(driver);
+		actions.contextClick(targetItem).build().perform();
+	}
+	//alerts
+	public void acceptAlert(WebDriver driver) 
+	{
+		driver.switchTo().alert().accept();
+	}
+	public void dismissAlert(WebDriver driver)
+	{
+		driver.switchTo().alert().dismiss();
+	}
+	
+	public void promtAlert (WebElement alertElement,String input, WebDriver driver)
+	{
+		driver.switchTo().alert().sendKeys(input);
+   	  	driver.switchTo().alert().accept();
+	}
+	//javascript
+	public void javaScriptClick(WebDriver driver,WebElement element) 
+	{
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();",element);
+	}
+	public void scrollDownOfaWebPage(WebDriver driver, int x, int y)
+	{
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(x,y)");
+	}
+	public void scrollUpOfaWebPage(WebDriver driver)
+	{
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(x,y)");
+	}
+
 }

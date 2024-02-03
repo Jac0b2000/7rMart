@@ -5,17 +5,19 @@ import org.testng.annotations.Test;
 import pages.AdminUsersPage;
 import pages.LoginPage;
 import pages.MenuPage;
+import utilities.ExcelUtility;
 
 public class AdminUsersTest extends Base{
 	@Test(description = "user is able to create a new admin user")
 	public void verifyThatANewAdminUserCanBeAddedToAdminUsersTable() {
-		String username = "admin";
-		String password = "admin";
-		String menu = "Admin Users";
+		String username = ExcelUtility.getString(1, 0, "LoginPage");
+		String password = ExcelUtility.getString(1, 1, "LoginPage");
+		String menu = ExcelUtility.getString(2, 0, "MenuPage");
 		
-		String newUsername ="aaaaa";
-		String newPassword ="12345";
-		String userType= "Partner";
+		
+		String newUsername = null;
+		String newPassword = null;
+		String userType = ExcelUtility.getString(3, 0, "AdminUsersPage") ;
 
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUsernameOnUsernameField(username);

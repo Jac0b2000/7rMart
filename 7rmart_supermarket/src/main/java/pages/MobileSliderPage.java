@@ -1,0 +1,56 @@
+package pages;
+
+import java.awt.AWTException;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import utilities.FileUploadUtility;
+import utilities.GeneralUtility;
+import utilities.PageUtilitiy;
+import utilities.WaitUtility;
+
+public class MobileSliderPage {
+
+	public WebDriver driver;
+
+	public MobileSliderPage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(xpath = "//a[@onclick='click_button(1)']") WebElement newButton;
+	@FindBy(xpath = "//select[@id='cat_id']") WebElement categoryDropdown;
+	@FindBy(xpath = "//input[@id='main_img']") WebElement chooseFileButton;
+	@FindBy(xpath = "//button[@name='create']") WebElement saveButton;
+	@FindBy(xpath = "//div[contains(@class,'alert')]") WebElement alertElement;
+	
+	public void clickOnNewButton() {
+		newButton.click();
+	}
+	
+	public void selectCategoryFromDropdown(String category) {
+		PageUtilitiy pageutility = new PageUtilitiy();
+		pageutility.selectValueUsingSelectByVisibleText(categoryDropdown, category);
+	}
+	
+	public void uploadImage() throws AWTException {
+		WaitUtility waitutility = new WaitUtility();
+		waitutility.ExplicitWaitForAnElementToBeClickable(driver, chooseFileButton);
+		
+		FileUploadUtility fileuploadutility = new FileUploadUtility();
+		fileuploadutility.fileUploadUsingSendKeys(chooseFileButton, GeneralUtility.SLIDER_IMG);
+	}
+	
+	public void clickOnSaveButton() {
+		WaitUtility waitutility = new WaitUtility();
+		waitutility.ExplicitWaitForAnElementToBeClickable(driver, saveButton);
+		saveButton.click();
+	}
+	
+	public String getTextFromAlertMessage() {
+		return alertElement.getText();
+	}
+}

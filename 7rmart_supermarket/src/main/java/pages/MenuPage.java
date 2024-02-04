@@ -7,7 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import utilities.PageUtilitiy;
-import utilities.WaitUtility;
 
 public class MenuPage {
 	

@@ -1,5 +1,7 @@
 package testscripts;
 
+import static org.testng.Assert.assertEquals;
+
 import org.testng.annotations.Test;
 import pages.LoginPage;
 import pages.MenuPage;
@@ -12,6 +14,7 @@ public class MenuTest extends Base {
 		String username = ExcelUtility.getString(1, 0, "LoginPage");
 		String password = ExcelUtility.getString(1, 1, "LoginPage");
 		String menu = ExcelUtility.getString(10, 0, "MenuPage");
+		String expectedHeader = ExcelUtility.getString(10, 0, "MenuPage");
 		
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUsernameOnUsernameField(username);
@@ -21,6 +24,7 @@ public class MenuTest extends Base {
 		MenuPage menupage = new MenuPage(driver);
 		menupage.clickOnMenuItems(menu);
 		
-		//assert
+		String actualHeader = menupage.getHeaderOfThePage();
+		assertEquals(actualHeader, expectedHeader, "User is not able to click on the selected menu");
 	}
 }

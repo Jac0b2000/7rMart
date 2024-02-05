@@ -20,7 +20,8 @@ public class MenuPage {
 	
 	@FindBy(xpath = "//div[contains(@class,'small')]//child::div[@class='inner']") List<WebElement> menuItems;
 	@FindBy(xpath = "//a[@class='small-box-footer']") List<WebElement> menuItemsLink;
-	@FindBy(xpath ="//h1[text()='List Orders']")WebElement itemHeading;
+	@FindBy(xpath = "//h1") WebElement headerElement;
+	//@FindBy(xpath ="//h1[text()='List Orders']")WebElement itemHeading;
 	public void clickOnMenuItems(String menuToBeClicked) {
 		int menuIndex;
 		for (WebElement menuItem : menuItems) {
@@ -31,8 +32,10 @@ public class MenuPage {
 			}
 		}
 	}
-	public boolean isCorrespondingPageDisplayed() {
-		return itemHeading.isDisplayed();
+	//public boolean isCorrespondingPageDisplayed() {
+	//	return itemHeading.isDisplayed();
+	//}
+	public String getHeaderOfThePage() {
+		return headerElement.getText();
 	}
-	
 }

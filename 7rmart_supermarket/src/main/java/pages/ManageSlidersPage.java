@@ -8,6 +8,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import utilities.FileUploadUtility;
+import utilities.GeneralUtility;
+import utilities.WaitUtility;
 
 public class ManageSlidersPage {
 	WebDriver driver;
@@ -26,15 +28,19 @@ public class ManageSlidersPage {
 		newButton.click();
 	}
 	public void fileUploadButton() throws AWTException {
-		String filepath = "C:\\Users\\user\\OneDrive\\Pictures\\download.jpg";
+		WaitUtility waitutility = new WaitUtility();
+		waitutility.ExplicitWaitForAnElementToBeClickable(driver, chooseFileButton);
+		
 		FileUploadUtility fileuploadutility = new FileUploadUtility();
-		//fileuploadutility.fileUploadUsingRobotClass(chooseFileButton, filepath);
-		fileuploadutility.fileUploadUsingSendKeys(chooseFileButton, filepath);
+		fileuploadutility.fileUploadUsingSendKeys(chooseFileButton, GeneralUtility.MANAGESLIDER_IMG);
 	}
 	public void enterWeblink(String link) {
 		linkInputField.sendKeys(link);
 	}
 	public void clickOnSaveButton() {
+		WaitUtility waitutility = new WaitUtility();
+		waitutility.ExplicitWaitForAnElementToBeClickable(driver, saveButton);
+		
 		saveButton.click();
 	}
 	public boolean isSliderCreationSuccesAlertShown() {

@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Feb 02 14:17:13 IST 2024</td>
+<td>Started on:</td><td>Mon Feb 05 07:29:15 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>2 seconds (2747 ms)</td>
+<tr><td>Total time:</td><td>3 seconds (3163 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,13 +76,10 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testscripts.AddLocationsTest.verifyWetherUserCanAddNewLocation()'><b>verifyWetherUserCanAddNewLocation</b><br>Test class: testscripts.AddLocationsTest<br>Test method: user is able to create a new location</td>
-<td><div><pre>java.lang.IllegalStateException: Cannot get a STRING value from a NUMERIC cell
-	at org.apache.poi.xssf.usermodel.XSSFCell.typeMismatch(XSSFCell.java:987)
-	at org.apache.poi.xssf.usermodel.XSSFCell.getRichStringCellValue(XSSFCell.java:336)
-	at org.apache.poi.xssf.usermodel.XSSFCell.getStringCellValue(XSSFCell.java:280)
-	at utilities.ExcelUtility.getString(ExcelUtility.java:34)
-	at testscripts.AddLocationsTest.verifyWetherUserCanAddNewLocation(AddLocationsTest.java:19)
+<td title='testscripts.ManageSlidersTest.verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders()'><b>verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders</b><br>Test class: testscripts.ManageSlidersTest<br>Test method: user is able to upload an image and a link to the list sliders</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFSheet.getRow(int)&quot; because &quot;utilities.ExcelUtility.sh&quot; is null
+	at utilities.ExcelUtility.getString(ExcelUtility.java:32)
+	at testscripts.ManageSlidersTest.verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders(ManageSlidersTest.java:19)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -109,13 +106,10 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1907178890", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1907178890'><pre>java.lang.IllegalStateException: Cannot get a STRING value from a NUMERIC cell
-	at org.apache.poi.xssf.usermodel.XSSFCell.typeMismatch(XSSFCell.java:987)
-	at org.apache.poi.xssf.usermodel.XSSFCell.getRichStringCellValue(XSSFCell.java:336)
-	at org.apache.poi.xssf.usermodel.XSSFCell.getStringCellValue(XSSFCell.java:280)
-	at utilities.ExcelUtility.getString(ExcelUtility.java:34)
-	at testscripts.AddLocationsTest.verifyWetherUserCanAddNewLocation(AddLocationsTest.java:19)
+</pre></div><a href='#' onClick='toggleBox("stack-trace227381657", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace227381657'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFSheet.getRow(int)&quot; because &quot;utilities.ExcelUtility.sh&quot; is null
+	at utilities.ExcelUtility.getString(ExcelUtility.java:32)
+	at testscripts.ManageSlidersTest.verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders(ManageSlidersTest.java:19)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -144,7 +138,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>testscripts.AddLocationsTest@1ca3b418</td></tr>
+<td>testscripts.ManageSlidersTest@2034b64c</td></tr>
 </table><p>
 </body>
 </html>

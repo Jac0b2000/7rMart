@@ -1,13 +1,14 @@
 package testscripts;
 
 import static org.testng.Assert.assertTrue;
+
 import java.awt.AWTException;
+
 import org.testng.annotations.Test;
 import pages.LoginPage;
 import pages.ManageSlidersPage;
 import pages.MenuPage;
 import utilities.ExcelUtility;
-import utilities.GeneralUtility;
 
 public class ManageSlidersTest extends Base{
 	@Test(description = "user is able to upload an image and a link to the list sliders")
@@ -17,7 +18,7 @@ public class ManageSlidersTest extends Base{
 		
 		String menu = ExcelUtility.getString(7, 0, "MenuPage");
 		
-		String link = GeneralUtility.IMAGEUPLOADFILE;
+		String link = ExcelUtility.getString(1, 0, "ManageSliderPage");
 		
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUsernameOnUsernameField(username);

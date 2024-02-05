@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testscripts.AddLocationsTest">
+      <class name="testscripts.ManageSlidersTest">
         <methods>
           <include name="initializeBrowser"/>
-          <include name="verifyWetherUserCanAddNewLocation"/>
+          <include name="verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders"/>
           <include name="driverQuit"/>
         </methods>
-      </class> <!-- testscripts.AddLocationsTest -->
+      </class> <!-- testscripts.ManageSlidersTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

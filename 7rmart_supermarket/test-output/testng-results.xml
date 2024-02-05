@@ -2,27 +2,24 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-02T14:17:13 IST" name="Default suite" finished-at="2024-02-02T14:17:15 IST" duration-ms="2747">
+  <suite started-at="2024-02-05T07:29:15 IST" name="Default suite" finished-at="2024-02-05T07:29:19 IST" duration-ms="3163">
     <groups>
     </groups>
-    <test started-at="2024-02-02T14:17:13 IST" name="Default test" finished-at="2024-02-02T14:17:15 IST" duration-ms="2747">
-      <class name="testscripts.AddLocationsTest">
-        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:testscripts.AddLocationsTest@1ca3b418]" started-at="2024-02-02T14:17:13 IST" name="initializeBrowser" finished-at="2024-02-02T14:17:15 IST" duration-ms="1957" status="PASS">
+    <test started-at="2024-02-05T07:29:15 IST" name="Default test" finished-at="2024-02-05T07:29:19 IST" duration-ms="3163">
+      <class name="testscripts.ManageSlidersTest">
+        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:testscripts.ManageSlidersTest@2034b64c]" started-at="2024-02-05T07:29:16 IST" name="initializeBrowser" finished-at="2024-02-05T07:29:18 IST" duration-ms="2321" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyWetherUserCanAddNewLocation()[pri:0, instance:testscripts.AddLocationsTest@1ca3b418]" started-at="2024-02-02T14:17:15 IST" name="verifyWetherUserCanAddNewLocation" description="user is able to create a new location" finished-at="2024-02-02T14:17:15 IST" duration-ms="659" status="FAIL">
-          <exception class="java.lang.IllegalStateException">
+        <test-method signature="verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders()[pri:0, instance:testscripts.ManageSlidersTest@2034b64c]" started-at="2024-02-05T07:29:18 IST" name="verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders" description="user is able to upload an image and a link to the list sliders" finished-at="2024-02-05T07:29:19 IST" duration-ms="671" status="FAIL">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[Cannot get a STRING value from a NUMERIC cell]]>
+              <![CDATA[Cannot invoke "org.apache.poi.xssf.usermodel.XSSFSheet.getRow(int)" because "utilities.ExcelUtility.sh" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: Cannot get a STRING value from a NUMERIC cell
-at org.apache.poi.xssf.usermodel.XSSFCell.typeMismatch(XSSFCell.java:987)
-at org.apache.poi.xssf.usermodel.XSSFCell.getRichStringCellValue(XSSFCell.java:336)
-at org.apache.poi.xssf.usermodel.XSSFCell.getStringCellValue(XSSFCell.java:280)
-at utilities.ExcelUtility.getString(ExcelUtility.java:34)
-at testscripts.AddLocationsTest.verifyWetherUserCanAddNewLocation(AddLocationsTest.java:19)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFSheet.getRow(int)" because "utilities.ExcelUtility.sh" is null
+at utilities.ExcelUtility.getString(ExcelUtility.java:32)
+at testscripts.ManageSlidersTest.verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders(ManageSlidersTest.java:19)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -51,15 +48,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyWetherUserCanAddNewLocation -->
-        <test-method is-config="true" signature="driverQuit()[pri:0, instance:testscripts.AddLocationsTest@1ca3b418]" started-at="2024-02-02T14:17:15 IST" name="driverQuit" finished-at="2024-02-02T14:17:15 IST" duration-ms="102" status="PASS">
+        </test-method> <!-- verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders -->
+        <test-method is-config="true" signature="driverQuit()[pri:0, instance:testscripts.ManageSlidersTest@2034b64c]" started-at="2024-02-05T07:29:19 IST" name="driverQuit" finished-at="2024-02-05T07:29:19 IST" duration-ms="137" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-      </class> <!-- testscripts.AddLocationsTest -->
+      </class> <!-- testscripts.ManageSlidersTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

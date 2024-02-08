@@ -2,10 +2,14 @@ package testscripts;
 
 import static org.testng.Assert.assertTrue;
 import org.testng.annotations.Test;
+
+import com.github.javafaker.Faker;
+
 import pages.AdminUsersPage;
 import pages.LoginPage;
 import pages.MenuPage;
 import utilities.ExcelUtility;
+import utilities.RandomUtilty;
 
 public class AdminUsersTest extends Base{
 	@Test(description = "user is able to create a new admin user")
@@ -14,7 +18,7 @@ public class AdminUsersTest extends Base{
 		String password = ExcelUtility.getString(1, 1, "LoginPage");
 		String menu = ExcelUtility.getString(2, 0, "MenuPage");
 		
-		
+		RandomUtilty randomutilty = new RandomUtilty();
 		String newUsername = null;
 		String newPassword = null;
 		String userType = ExcelUtility.getString(3, 0, "AdminUsersPage") ;

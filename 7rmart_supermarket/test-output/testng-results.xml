@@ -2,24 +2,31 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-05T07:29:15 IST" name="Default suite" finished-at="2024-02-05T07:29:19 IST" duration-ms="3163">
+  <suite started-at="2024-02-08T07:41:33 IST" name="Suite" finished-at="2024-02-08T07:41:37 IST" duration-ms="3714">
     <groups>
     </groups>
-    <test started-at="2024-02-05T07:29:15 IST" name="Default test" finished-at="2024-02-05T07:29:19 IST" duration-ms="3163">
-      <class name="testscripts.ManageSlidersTest">
-        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:testscripts.ManageSlidersTest@2034b64c]" started-at="2024-02-05T07:29:16 IST" name="initializeBrowser" finished-at="2024-02-05T07:29:18 IST" duration-ms="2321" status="PASS">
+    <test started-at="2024-02-08T07:41:33 IST" name="Test" finished-at="2024-02-08T07:41:37 IST" duration-ms="3714">
+      <class name="testscripts.LoginTest">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscripts.LoginTest@660acfb]" started-at="2024-02-08T07:41:33 IST" name="initializeBrowser" finished-at="2024-02-08T07:41:36 IST" duration-ms="2827" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders()[pri:0, instance:testscripts.ManageSlidersTest@2034b64c]" started-at="2024-02-05T07:29:18 IST" name="verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders" description="user is able to upload an image and a link to the list sliders" finished-at="2024-02-05T07:29:19 IST" duration-ms="671" status="FAIL">
+        <test-method signature="verifyWhetherUserCanLoginUsingBothValidCredentials()[pri:0, instance:testscripts.LoginTest@660acfb]" started-at="2024-02-08T07:41:36 IST" name="verifyWhetherUserCanLoginUsingBothValidCredentials" description="user is able to login with valid credentials" finished-at="2024-02-08T07:41:36 IST" duration-ms="577" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[Cannot invoke "org.apache.poi.xssf.usermodel.XSSFSheet.getRow(int)" because "utilities.ExcelUtility.sh" is null]]>
+              <![CDATA[Cannot invoke "org.apache.poi.ss.usermodel.Cell.getStringCellValue()" because "c" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFSheet.getRow(int)" because "utilities.ExcelUtility.sh" is null
-at utilities.ExcelUtility.getString(ExcelUtility.java:32)
-at testscripts.ManageSlidersTest.verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders(ManageSlidersTest.java:19)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.ss.usermodel.Cell.getStringCellValue()" because "c" is null
+at utilities.ExcelUtility.getString(ExcelUtility.java:34)
+at testscripts.LoginTest.verifyWhetherUserCanLoginUsingBothValidCredentials(LoginTest.java:13)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -51,12 +58,19 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders -->
-        <test-method is-config="true" signature="driverQuit()[pri:0, instance:testscripts.ManageSlidersTest@2034b64c]" started-at="2024-02-05T07:29:19 IST" name="driverQuit" finished-at="2024-02-05T07:29:19 IST" duration-ms="137" status="PASS">
+        </test-method> <!-- verifyWhetherUserCanLoginUsingBothValidCredentials -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.LoginTest@660acfb]" started-at="2024-02-08T07:41:36 IST" name="driverQuit" finished-at="2024-02-08T07:41:37 IST" duration-ms="268" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyWhetherUserCanLoginUsingBothValidCredentials status=FAILURE method=LoginTest.verifyWhetherUserCanLoginUsingBothValidCredentials()[pri:0, instance:testscripts.LoginTest@660acfb] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-      </class> <!-- testscripts.ManageSlidersTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- testscripts.LoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

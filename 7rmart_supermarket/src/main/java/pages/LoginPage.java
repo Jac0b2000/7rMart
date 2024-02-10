@@ -11,11 +11,11 @@ public class LoginPage {
 			this.driver = driver;
 			PageFactory.initElements(driver, this);
 		}
-	@FindBy(xpath="//input[@placeholder='Username']") WebElement usernameField;
-	@FindBy(xpath="//input[@placeholder='Password']") WebElement passwordField;
-	@FindBy(xpath="//button[@type='submit']") WebElement signInButton;
-	@FindBy(xpath="//a[@class=' nav-link']//i[@class='nav-icon sidebar-item-icon fa fa-cog']") WebElement settingsButton;
-	@FindBy(xpath ="//div[@class='alert alert-danger alert-dismissible']")WebElement alertPopup;
+	@FindBy(xpath="//input[@placeholder='Username']") private WebElement usernameField;
+	@FindBy(xpath="//input[@placeholder='Password']") private WebElement passwordField;
+	@FindBy(xpath="//button[@type='submit']") private WebElement signInButton;
+	@FindBy(xpath="//a[@class=' nav-link']//i[@class='nav-icon sidebar-item-icon fa fa-cog']") private WebElement settingsButton;
+	@FindBy(xpath ="//div[@class='alert alert-danger alert-dismissible']") private WebElement alertPopup;
 	
 	public void enterUsernameOnUsernameField(String username) {
 		usernameField.sendKeys(username);

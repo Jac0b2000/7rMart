@@ -18,11 +18,11 @@ public class WaitUtility {
 	public static final long POLL_WAIT=15;
 	
 
-	public void implicitWait(WebDriver driver)
+	public void ImplicitWait(WebDriver driver)
 	{
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLICIT_WAIT));
 	}
-	public void waitForElement(WebDriver driver, WebElement target) {
+	public void WaitForElement(WebDriver driver, WebElement target) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
 		wait.until(ExpectedConditions.visibilityOf(target));
 	}
@@ -36,7 +36,7 @@ public class WaitUtility {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
-	public void fluentWaitForAlertIsPresent(WebDriver driver)
+	public void FluentWaitForAlertIsPresent(WebDriver driver)
 	{
 	Wait<WebDriver> fluentWait = new FluentWait<>(driver)
 	        .withTimeout(Duration.ofSeconds(FLUENT_WAIT))

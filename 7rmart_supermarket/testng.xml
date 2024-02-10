@@ -7,9 +7,9 @@
 	<parameter name="browser" value="chrome"></parameter>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="testscripts.LoginTest">
-		  <methods><include name="verifyWhetherUserCanLoginUsingBothValidCredentials"></include></methods>
-	  </class>
+      <class name="testscripts.AdminUsersTest"></class>
+      <class name="testscripts.LoginTest"></class>
+      <class name="testscripts.ManageDeliveryBoyTest"></class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

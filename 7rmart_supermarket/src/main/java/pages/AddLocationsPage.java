@@ -36,7 +36,7 @@ public WebDriver driver;
 		pageutility.selectValueUsingSelectByVisibleText(stateDropdown, state);
 		
 		WaitUtility waitutility = new WaitUtility();
-		waitutility.waitForElement(driver, stateDropdown);
+		waitutility.WaitForElement(driver, stateDropdown);
 	}
 	public void inputInLocationInputField(String input) {
 		locationInputField.sendKeys(input);

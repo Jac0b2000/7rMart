@@ -10,7 +10,7 @@
       <class name="testscripts.LoginTest">
         <methods>
           <include name="initializeBrowser"/>
-          <include name="verifyWhetherUserCanLoginUsingBothValidCredentials"/>
+          <include name="VerifyWhetherUserCanLoginUsingInvalidUsernameButValidPassword"/>
           <include name="driverQuit"/>
         </methods>
       </class> <!-- testscripts.LoginTest -->

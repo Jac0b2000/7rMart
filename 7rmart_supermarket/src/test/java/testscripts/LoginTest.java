@@ -6,8 +6,10 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 import utilities.ExcelUtility;
+import utilities.RandomUtilty;
 
 public class LoginTest extends Base {
+	RandomUtilty randomutility;
 	@Test(description ="user is able to login with valid credentials")
 	public void verifyWhetherUserCanLoginUsingBothValidCredentials() {
 		String userName = ExcelUtility.getString(1, 0, "LoginPage");
@@ -23,8 +25,9 @@ public class LoginTest extends Base {
 	}
 	@Test(description ="user is not able to login with valid username but invalid password")
 	public void VerifyWhetherUserCanLoginUsingValidUsernameButInvalidPassword() {
+		randomutility = new RandomUtilty();
 		String userName = ExcelUtility.getString(1, 0, "LoginPage");
-		String passWord = ExcelUtility.getString(3, 1, "LoginPage");
+		String passWord = randomutility.password();
 		
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUsernameOnUsernameField(userName);
@@ -36,7 +39,8 @@ public class LoginTest extends Base {
 	}
 	@Test(description ="user is not able to login with invalid username but valid password")
 	public void VerifyWhetherUserCanLoginUsingInvalidUsernameButValidPassword() {
-		String userName = ExcelUtility.getString(3, 0, "LoginPage");
+		randomutility = new RandomUtilty();
+		String userName = randomutility.username();
 		String passWord = ExcelUtility.getString(1, 1, "LoginPage");
 		
 		LoginPage loginpage = new LoginPage(driver);

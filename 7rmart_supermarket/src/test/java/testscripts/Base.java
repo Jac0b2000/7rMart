@@ -13,6 +13,7 @@ import org.testng.annotations.Parameters;
 
 import utilities.ScreenshotUtility;
 
+
 public class Base {
 	 public WebDriver driver;
 		
@@ -33,6 +34,8 @@ public class Base {
 	    	}
 			driver.get("https://groceryapp.uniqassosiates.com/admin/login");
 			driver.manage().window().maximize();
+			
+			
 			}
 	    
 		@AfterMethod

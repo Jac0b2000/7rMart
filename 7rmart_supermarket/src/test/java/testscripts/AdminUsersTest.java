@@ -2,9 +2,6 @@ package testscripts;
 
 import static org.testng.Assert.assertTrue;
 import org.testng.annotations.Test;
-
-import com.github.javafaker.Faker;
-
 import pages.AdminUsersPage;
 import pages.LoginPage;
 import pages.MenuPage;
@@ -19,8 +16,8 @@ public class AdminUsersTest extends Base{
 		String menu = ExcelUtility.getString(2, 0, "MenuPage");
 		
 		RandomUtilty randomutilty = new RandomUtilty();
-		String newUsername = null;
-		String newPassword = null;
+		String newUsername = randomutilty.username();
+		String newPassword = randomutilty.password();
 		String userType = ExcelUtility.getString(3, 0, "AdminUsersPage") ;
 
 		LoginPage loginPage = new LoginPage(driver);

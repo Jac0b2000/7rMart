@@ -3,25 +3,25 @@ package utilities;
 import com.github.javafaker.Faker;
 
 public class RandomUtilty {
-	public void firstName(String firstName) {
+	public String firstName() {
 		Faker faker = new Faker();
-		firstName = faker.name().firstName();
+		return faker.name().firstName();
 	}
-	public void lastName(String lastName) {
+	public String lastName() {
 		Faker faker = new Faker();
-		lastName = faker.name().lastName();
+		return faker.name().lastName();
 	}
-	public void emailAddress(String email) {
+	public String emailAddress() {
 		Faker faker = new Faker();
-		email = faker.internet().emailAddress();
+		return faker.internet().emailAddress();
 	}
-	public void username(String username) {
+	public String username() {
 		Faker faker = new Faker();
-		username = faker.name().username();
+		return faker.name().username();
 	}
-	public void password(String password) {
+	public String password() {
 		Faker faker = new Faker();
-		password = faker.internet().password(true);
+		return faker.internet().password(true);
 	}
 	
 }

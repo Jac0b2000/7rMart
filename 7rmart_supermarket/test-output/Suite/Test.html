@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>5/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Feb 08 07:41:33 IST 2024</td>
+<td>Started on:</td><td>Fri Feb 09 07:02:16 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>3 seconds (3714 ms)</td>
+<tr><td>Total time:</td><td>16 seconds (16961 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,15 +76,13 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testscripts.LoginTest.verifyWhetherUserCanLoginUsingBothValidCredentials()'><b>verifyWhetherUserCanLoginUsingBothValidCredentials</b><br>Test class: testscripts.LoginTest<br>Test method: user is able to login with valid credentials</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.ss.usermodel.Cell.getStringCellValue()&quot; because &quot;c&quot; is null
-	at utilities.ExcelUtility.getString(ExcelUtility.java:34)
-	at testscripts.LoginTest.verifyWhetherUserCanLoginUsingBothValidCredentials(LoginTest.java:13)
+<td title='testscripts.LoginTest.VerifyWhetherUserCanLoginUsingInvalidUsernameButValidPassword()'><b>VerifyWhetherUserCanLoginUsingInvalidUsernameButValidPassword</b><br>Test class: testscripts.LoginTest<br>Test method: user is not able to login with invalid username but valid password</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;utilities.RandomUtilty.username()&quot; because &quot;this.randomutility&quot; is null
+	at testscripts.LoginTest.VerifyWhetherUserCanLoginUsingInvalidUsernameButValidPassword(LoginTest.java:42)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1764622989", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1764622989'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.ss.usermodel.Cell.getStringCellValue()&quot; because &quot;c&quot; is null
-	at utilities.ExcelUtility.getString(ExcelUtility.java:34)
-	at testscripts.LoginTest.verifyWhetherUserCanLoginUsingBothValidCredentials(LoginTest.java:13)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace238998613", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace238998613'><pre>java.lang.NullPointerException: Cannot invoke &quot;utilities.RandomUtilty.username()&quot; because &quot;this.randomutility&quot; is null
+	at testscripts.LoginTest.VerifyWhetherUserCanLoginUsingInvalidUsernameButValidPassword(LoginTest.java:42)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -113,7 +111,41 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>testscripts.LoginTest@660acfb</td></tr>
+<td>testscripts.LoginTest@1a5a4e19</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testscripts.LoginTest.verifyWhetherUserCanLoginUsingBothValidCredentials()'><b>verifyWhetherUserCanLoginUsingBothValidCredentials</b><br>Test class: testscripts.LoginTest<br>Test method: user is able to login with valid credentials</td>
+<td></td>
+<td>0</td>
+<td>testscripts.LoginTest@1a5a4e19</td></tr>
+<tr>
+<td title='testscripts.LoginTest.VerifyWhetherUserCanLoginUsingValidUsernameButInvalidPassword()'><b>VerifyWhetherUserCanLoginUsingValidUsernameButInvalidPassword</b><br>Test class: testscripts.LoginTest<br>Test method: user is not able to login with valid username but invalid password</td>
+<td></td>
+<td>0</td>
+<td>testscripts.LoginTest@1a5a4e19</td></tr>
+<tr>
+<td title='testscripts.ManageDeliveryBoyTest.verifyWhenUserSearchDeliveryBoyUsingCredentialsItDisplaysDetailsOfCorrespondingDeliveryBoy()'><b>verifyWhenUserSearchDeliveryBoyUsingCredentialsItDisplaysDetailsOfCorrespondingDeliveryBoy</b><br>Test class: testscripts.ManageDeliveryBoyTest</td>
+<td></td>
+<td>1</td>
+<td>testscripts.ManageDeliveryBoyTest@5167f57d</td></tr>
+<tr>
+<td title='testscripts.AdminUsersTest.verifyThatANewAdminUserCanBeAddedToAdminUsersTable()'><b>verifyThatANewAdminUserCanBeAddedToAdminUsersTable</b><br>Test class: testscripts.AdminUsersTest<br>Test method: user is able to create a new admin user</td>
+<td></td>
+<td>2</td>
+<td>testscripts.AdminUsersTest@1df8da7a</td></tr>
+<tr>
+<td title='testscripts.LoginTest.VerifyWhetherUserCanLoginUsingBothInvalidCredentials()'><b>VerifyWhetherUserCanLoginUsingBothInvalidCredentials</b><br>Test class: testscripts.LoginTest<br>Test method: user is not able to login with both invalid credentials<br>Parameters: adnim, qwerty</td>
+<td></td>
+<td>0</td>
+<td>testscripts.LoginTest@1a5a4e19</td></tr>
 </table><p>
 </body>
 </html>

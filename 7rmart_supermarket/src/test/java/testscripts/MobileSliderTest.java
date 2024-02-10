@@ -13,7 +13,7 @@ import pages.MenuPage;
 
 public class MobileSliderTest extends Base {
 	
-	@Test(description = "Verify that the user can add a new slider in the mobile slider page")
+	@Test(description = "Verify wether the user can add a new slider in the mobile slider page")
 	public void verifyThatTheUserCanAddANewSliderInTheMobileSliderPage() throws AWTException {
 		String username = ExcelUtility.getString(1, 0, "LoginPage");
 		String password = ExcelUtility.getString(1, 1, "LoginPage");

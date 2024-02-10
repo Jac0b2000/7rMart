@@ -5,12 +5,13 @@ import static org.testng.Assert.assertTrue;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.LoginPage;
+import retry.Retry;
 import utilities.ExcelUtility;
 import utilities.RandomUtilty;
 
 public class LoginTest extends Base {
 	RandomUtilty randomutility;
-	@Test(description ="user is able to login with valid credentials")
+	@Test(retryAnalyzer = Retry.class, description ="Verify wether the user is able to login with valid credentials")
 	public void verifyWhetherUserCanLoginUsingBothValidCredentials() {
 		String userName = ExcelUtility.getString(1, 0, "LoginPage");
 		String passWord = ExcelUtility.getString(1, 1, "LoginPage");
@@ -23,7 +24,7 @@ public class LoginTest extends Base {
 		boolean isHomePageDisplayed = loginpage.isSettingsButtonAvailable();
 		assertTrue(isHomePageDisplayed, "User is unable to login with both valid credentials");
 	}
-	@Test(description ="user is not able to login with valid username but invalid password")
+	@Test(retryAnalyzer = Retry.class, description ="Verify wether the user is not able to login with valid username but invalid password")
 	public void VerifyWhetherUserCanLoginUsingValidUsernameButInvalidPassword() {
 		randomutility = new RandomUtilty();
 		String userName = ExcelUtility.getString(1, 0, "LoginPage");
@@ -37,7 +38,7 @@ public class LoginTest extends Base {
 		boolean isAlertPopupDisplayed = loginpage.isAlertPopupDisplayed();
 		assertTrue(isAlertPopupDisplayed, "User is able to login with valid username But Invalid Password");
 	}
-	@Test(description ="user is not able to login with invalid username but valid password")
+	@Test(retryAnalyzer = Retry.class, description ="Verify wether the user is not able to login with invalid username but valid password")
 	public void VerifyWhetherUserCanLoginUsingInvalidUsernameButValidPassword() {
 		randomutility = new RandomUtilty();
 		String userName = randomutility.username();
@@ -51,7 +52,7 @@ public class LoginTest extends Base {
 		boolean isAlertPopupDisplayed = loginpage.isAlertPopupDisplayed();
 		assertTrue(isAlertPopupDisplayed, "User is able to login with invalid username But valid Password");
 	}
-	@Test(dataProvider="LoginProvider", description ="user is not able to login with both invalid credentials")
+	@Test(retryAnalyzer = Retry.class, dataProvider="LoginProvider", description ="Verify wether the user is not able to login with both invalid credentials")
 	public void VerifyWhetherUserCanLoginUsingBothInvalidCredentials(String userName, String passWord) {
 
 		LoginPage loginpage = new LoginPage(driver);

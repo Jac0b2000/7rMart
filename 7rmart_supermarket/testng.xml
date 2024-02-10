@@ -7,9 +7,16 @@
 	<parameter name="browser" value="chrome"></parameter>
   <test thread-count="5" name="Test">
     <classes>
+	  <class name="testscripts.LoginTest"></class>
       <class name="testscripts.AdminUsersTest"></class>
-      <class name="testscripts.LoginTest"></class>
+      <class name="testscripts.AddLocationsTest"></class>
       <class name="testscripts.ManageDeliveryBoyTest"></class>
+      <class name="testscripts.ManageOfferCodeTest"></class>
+      <class name="testscripts.ManageOrdersTest"></class>
+      <class name="testscripts.ManageSlidersTest"></class>
+      <class name="testscripts.MenuTest"></class>
+      <class name="testscripts.MobileSliderTest"></class>
+      <class name="testscripts.PushNotificationTest"></class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

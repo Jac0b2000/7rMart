@@ -6,10 +6,11 @@ import org.testng.annotations.Test;
 import pages.AddLocationsPage;
 import pages.LoginPage;
 import pages.MenuPage;
+import retry.Retry;
 import utilities.ExcelUtility;
 
 public class AddLocationsTest extends Base{
-	@Test(description = "user is able to create a new location")
+	@Test(retryAnalyzer = Retry.class, description = "Verify wether the  user is able to create a new location")
 	private void verifyWetherUserCanAddNewLocation() {
 		String username = ExcelUtility.getString(1, 0, "LoginPage");
 		String password = ExcelUtility.getString(1, 1, "LoginPage");

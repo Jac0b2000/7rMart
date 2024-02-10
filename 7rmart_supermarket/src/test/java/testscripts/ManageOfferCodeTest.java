@@ -10,12 +10,13 @@ import org.testng.annotations.Test;
 import pages.LoginPage;
 import pages.ManageOfferCodePage;
 import pages.MenuPage;
+import retry.Retry;
 import utilities.ExcelUtility;
 
 
 public class ManageOfferCodeTest extends Base {
 	
-	@Test(description = "Verify whether the user is able to add a new offer code in the manage offer code page")
+	@Test(retryAnalyzer = Retry.class, description = "Verify whether the user is able to add a new offer code in the manage offer code page")
 	public void verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage() throws AWTException, IOException {
 		String username = ExcelUtility.getString(1, 0, "LoginPage");
 		String password = ExcelUtility.getString(1, 1, "LoginPage");

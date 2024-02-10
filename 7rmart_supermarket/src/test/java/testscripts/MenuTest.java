@@ -5,11 +5,12 @@ import static org.testng.Assert.assertEquals;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 import pages.MenuPage;
+import retry.Retry;
 import utilities.ExcelUtility;
 
 public class MenuTest extends Base {
 	
-	@Test
+	@Test(retryAnalyzer = Retry.class, description = "Verify wether the user can navigate to the corresponding menu items on clicking")
 	public void verifyThatWhenClickedOnMenuItemsNavigatesToTheCorrespondingPage() {
 		String username = ExcelUtility.getString(1, 0, "LoginPage");
 		String password = ExcelUtility.getString(1, 1, "LoginPage");

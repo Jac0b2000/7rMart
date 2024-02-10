@@ -12,9 +12,11 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
 import utilities.ScreenshotUtility;
+import utilities.WaitUtility;
 
 
 public class Base {
+	WaitUtility waitutility;
 	 public WebDriver driver;
 		
 	    @BeforeMethod
@@ -35,7 +37,7 @@ public class Base {
 			driver.get("https://groceryapp.uniqassosiates.com/admin/login");
 			driver.manage().window().maximize();
 			
-			
+			waitutility.ImplicitWait(driver);
 			}
 	    
 		@AfterMethod

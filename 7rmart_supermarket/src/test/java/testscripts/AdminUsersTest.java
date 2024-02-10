@@ -5,11 +5,12 @@ import org.testng.annotations.Test;
 import pages.AdminUsersPage;
 import pages.LoginPage;
 import pages.MenuPage;
+import retry.Retry;
 import utilities.ExcelUtility;
 import utilities.RandomUtilty;
 
 public class AdminUsersTest extends Base{
-	@Test(description = "user is able to create a new admin user")
+	@Test(retryAnalyzer = Retry.class, description = "Verify wether the user is able to create a new admin user")
 	public void verifyThatANewAdminUserCanBeAddedToAdminUsersTable() {
 		String username = ExcelUtility.getString(1, 0, "LoginPage");
 		String password = ExcelUtility.getString(1, 1, "LoginPage");

@@ -7,11 +7,12 @@ import org.testng.annotations.Test;
 import pages.LoginPage;
 import pages.ManageDeliveryBoyPage;
 import pages.MenuPage;
+import retry.Retry;
 import utilities.ExcelUtility;
 
 public class ManageDeliveryBoyTest extends Base {
 		
-	@Test
+	@Test(retryAnalyzer = Retry.class, description = "Verify wether the user can find corresponding delivery boy details by entering credentials of that delivery boy")
 	public void verifyWhenUserSearchDeliveryBoyUsingCredentialsItDisplaysDetailsOfCorrespondingDeliveryBoy() {
 		String username = ExcelUtility.getString(1, 0, "LoginPage");
 		String password = ExcelUtility.getString(1, 1, "LoginPage");

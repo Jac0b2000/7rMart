@@ -8,10 +8,11 @@ import org.testng.annotations.Test;
 import pages.LoginPage;
 import pages.ManageSlidersPage;
 import pages.MenuPage;
+import retry.Retry;
 import utilities.ExcelUtility;
 
 public class ManageSlidersTest extends Base{
-	@Test(description = "user is able to upload an image and a link to the list sliders")
+	@Test(retryAnalyzer = Retry.class, description = "user is able to upload an image and a link to the list sliders")
 	public void verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders() throws AWTException  {
 		String username = ExcelUtility.getString(1, 0, "LoginPage");
 		String password = ExcelUtility.getString(1, 1, "LoginPage");

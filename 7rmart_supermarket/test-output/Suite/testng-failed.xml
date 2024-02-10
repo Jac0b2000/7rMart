@@ -7,13 +7,79 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="testscripts.AdminUsersTest">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="verifyThatANewAdminUserCanBeAddedToAdminUsersTable"/>
+          <include name="driverQuit"/>
+        </methods>
+      </class> <!-- testscripts.AdminUsersTest -->
+      <class name="testscripts.PushNotificationTest">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="verifyThatTheUserCanSendAMessageInPushNotificationPage"/>
+          <include name="driverQuit"/>
+        </methods>
+      </class> <!-- testscripts.PushNotificationTest -->
+      <class name="testscripts.AddLocationsTest">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="verifyWetherUserCanAddNewLocation"/>
+          <include name="driverQuit"/>
+        </methods>
+      </class> <!-- testscripts.AddLocationsTest -->
+      <class name="testscripts.ManageOrdersTest">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="verifyThatTheUserCanSeeTheOrderDetailsInTheManageOrdersPage"/>
+          <include name="driverQuit"/>
+        </methods>
+      </class> <!-- testscripts.ManageOrdersTest -->
+      <class name="testscripts.ManageOfferCodeTest">
+        <methods>
+          <include name="verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage"/>
+          <include name="initializeBrowser"/>
+          <include name="driverQuit"/>
+        </methods>
+      </class> <!-- testscripts.ManageOfferCodeTest -->
       <class name="testscripts.LoginTest">
         <methods>
           <include name="initializeBrowser"/>
+          <include name="verifyWhetherUserCanLoginUsingBothValidCredentials"/>
           <include name="VerifyWhetherUserCanLoginUsingInvalidUsernameButValidPassword"/>
+          <include name="VerifyWhetherUserCanLoginUsingBothInvalidCredentials"/>
+          <include name="VerifyWhetherUserCanLoginUsingValidUsernameButInvalidPassword"/>
           <include name="driverQuit"/>
         </methods>
       </class> <!-- testscripts.LoginTest -->
+      <class name="testscripts.ManageSlidersTest">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders"/>
+          <include name="driverQuit"/>
+        </methods>
+      </class> <!-- testscripts.ManageSlidersTest -->
+      <class name="testscripts.MobileSliderTest">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="verifyThatTheUserCanAddANewSliderInTheMobileSliderPage"/>
+          <include name="driverQuit"/>
+        </methods>
+      </class> <!-- testscripts.MobileSliderTest -->
+      <class name="testscripts.MenuTest">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="verifyThatWhenClickedOnMenuItemsNavigatesToTheCorrespondingPage"/>
+          <include name="driverQuit"/>
+        </methods>
+      </class> <!-- testscripts.MenuTest -->
+      <class name="testscripts.ManageDeliveryBoyTest">
+        <methods>
+          <include name="verifyWhenUserSearchDeliveryBoyUsingCredentialsItDisplaysDetailsOfCorrespondingDeliveryBoy"/>
+          <include name="initializeBrowser"/>
+          <include name="driverQuit"/>
+        </methods>
+      </class> <!-- testscripts.ManageDeliveryBoyTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

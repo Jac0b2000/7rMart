@@ -12,10 +12,11 @@ import pages.ManageOfferCodePage;
 import pages.MenuPage;
 import retry.Retry;
 import utilities.ExcelUtility;
+import utilities.RandomUtilty;
 
 
 public class ManageOfferCodeTest extends Base {
-	
+	RandomUtilty randomutlity;
 	@Test(retryAnalyzer = Retry.class, description = "Verify whether the user is able to add a new offer code in the manage offer code page")
 	public void verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage() throws AWTException, IOException {
 		String username = ExcelUtility.getString(1, 0, "LoginPage");

@@ -1,6 +1,7 @@
 package testscripts;
 
 import java.io.IOException;
+import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,8 +16,8 @@ import utilities.ScreenshotUtility;
 import utilities.WaitUtility;
 
 
+
 public class Base {
-	WaitUtility waitutility;
 	 public WebDriver driver;
 		
 	    @BeforeMethod
@@ -36,8 +37,7 @@ public class Base {
 	    	}
 			driver.get("https://groceryapp.uniqassosiates.com/admin/login");
 			driver.manage().window().maximize();
-			
-			waitutility.ImplicitWait(driver);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WaitUtility.IMPLICIT_WAIT));
 			}
 	    
 		@AfterMethod

@@ -24,5 +24,8 @@ public class RandomUtilty {
 		faker = new Faker();
 		return faker.internet().password(true);
 	}
-	
+	public String code() {
+		faker = new Faker();
+		return faker.currency().code();
+	}
 }

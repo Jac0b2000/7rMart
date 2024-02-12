@@ -21,7 +21,7 @@ public class ManageOrdersTest extends Base {
 		
 		String menuToBeSelected = ExcelUtility.getString(10, 0, "MenuPage");
 		
-		String orderId = ExcelUtility.getInt(3, 0, "ManageOrdersPage");
+		String orderId = ExcelUtility.getInt(1, 0, "ManageOrdersPage");
 		
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUsernameOnUsernameField(username);

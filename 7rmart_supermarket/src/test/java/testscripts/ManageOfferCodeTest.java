@@ -24,6 +24,7 @@ public class ManageOfferCodeTest extends Base {
 		
 		String menuToBeSelected = ExcelUtility.getString(6, 0, "MenuPage");
 		
+		//String offerCode = randomutlity.code();
 		String offerCode = ExcelUtility.getString(0, 1, "ManageOfferCodePage");
 		String percentage = ExcelUtility.getInt(1, 1, "ManageOfferCodePage");
 		String amount = ExcelUtility.getInt(2, 1, "ManageOfferCodePage");

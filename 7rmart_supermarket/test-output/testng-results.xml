@@ -1,39 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results retried="2" ignored="2" total="6" passed="2" failed="0" skipped="0">
+<testng-results retried="2" ignored="2" total="5" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-12T07:27:00 IST" name="MultiBrowsing" finished-at="2024-02-12T07:27:08 IST" duration-ms="7820">
+  <suite started-at="2024-02-12T11:04:30 IST" name="SingleBrowsing" finished-at="2024-02-12T11:04:42 IST" duration-ms="11910">
     <groups>
     </groups>
-    <test started-at="2024-02-12T07:27:00 IST" name="EdgeTest" finished-at="2024-02-12T07:27:08 IST" duration-ms="7820">
-      <class name="testscripts.ManageSlidersTest">
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscripts.ManageSlidersTest@2bdd8394]" started-at="2024-02-12T07:27:00 IST" name="initializeBrowser" finished-at="2024-02-12T07:27:03 IST" duration-ms="2699" status="PASS">
+    <test started-at="2024-02-12T11:04:30 IST" name="Test" finished-at="2024-02-12T11:04:42 IST" duration-ms="11910">
+      <class name="testscripts.ManageOfferCodeTest">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscripts.ManageOfferCodeTest@169bb4dd]" started-at="2024-02-12T11:04:30 IST" name="initializeBrowser" finished-at="2024-02-12T11:04:32 IST" duration-ms="1841" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[edge]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method retried="true" signature="verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders()[pri:0, instance:testscripts.ManageSlidersTest@2bdd8394]" started-at="2024-02-12T07:27:03 IST" name="verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders" description="user is able to upload an image and a link to the list sliders" finished-at="2024-02-12T07:27:03 IST" duration-ms="72" status="SKIP">
-          <exception class="org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException">
+        <test-method retried="true" signature="verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage()[pri:0, instance:testscripts.ManageOfferCodeTest@169bb4dd]" started-at="2024-02-12T11:04:32 IST" name="verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage" description="Verify whether the user is able to add a new offer code in the manage offer code page" finished-at="2024-02-12T11:04:34 IST" duration-ms="2579" status="SKIP">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[No valid entries or contents found, this is not a valid OOXML (Office Open XML) file]]>
+              <![CDATA[User is not able to add a new promo code in the manage offer code page expected [×
+Alert!
+Offer Code already exists.] but found [×
+Alert!
+Offer Created Successfully]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
-at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:156)
-at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.<init>(ZipInputStreamZipEntrySource.java:94)
-at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:132)
-at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
-at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:290)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286)
-at utilities.ExcelUtility.getString(ExcelUtility.java:26)
-at testscripts.ManageSlidersTest.verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders(ManageSlidersTest.java:17)
+              <![CDATA[java.lang.AssertionError: User is not able to add a new promo code in the manage offer code page expected [×
+Alert!
+Offer Code already exists.] but found [×
+Alert!
+Offer Created Successfully]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at testscripts.ManageOfferCodeTest.verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage(ManageOfferCodeTest.java:51)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -48,64 +53,36 @@ at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 at org.testng.TestRunner.privateRun(TestRunner.java:848)
 at org.testng.TestRunner.run(TestRunner.java:621)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1623)
-Caused by: java.util.zip.ZipException: Unexpected record signature: 0XCB40C433
-at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.getNextZipEntry(ZipArchiveInputStream.java:296)
-at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:152)
-... 28 more
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.ManageSlidersTest@2bdd8394]" started-at="2024-02-12T07:27:03 IST" name="driverQuit" finished-at="2024-02-12T07:27:03 IST" duration-ms="182" status="PASS">
+        </test-method> <!-- verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.ManageOfferCodeTest@169bb4dd]" started-at="2024-02-12T11:04:34 IST" name="driverQuit" finished-at="2024-02-12T11:04:34 IST" duration-ms="111" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders status=SKIP method=ManageSlidersTest.verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders()[pri:0, instance:testscripts.ManageSlidersTest@2bdd8394] output={null}]]]>
+                <![CDATA[[TestResult name=verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage status=SKIP method=ManageOfferCodeTest.verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage()[pri:0, instance:testscripts.ManageOfferCodeTest@169bb4dd] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscripts.ManageSlidersTest@2bdd8394]" started-at="2024-02-12T07:27:03 IST" name="initializeBrowser" finished-at="2024-02-12T07:27:05 IST" duration-ms="2026" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[edge]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders()[pri:0, instance:testscripts.ManageSlidersTest@2bdd8394]" started-at="2024-02-12T07:27:05 IST" name="verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders" description="user is able to upload an image and a link to the list sliders" finished-at="2024-02-12T07:27:07 IST" duration-ms="2591" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.ManageSlidersTest@2bdd8394]" started-at="2024-02-12T07:27:07 IST" name="driverQuit" finished-at="2024-02-12T07:27:08 IST" duration-ms="207" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders status=SUCCESS method=ManageSlidersTest.verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders()[pri:0, instance:testscripts.ManageSlidersTest@2bdd8394] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverQuit -->
-      </class> <!-- testscripts.ManageSlidersTest -->
-    </test> <!-- EdgeTest -->
-    <test started-at="2024-02-12T07:27:00 IST" name="ChromeTest" finished-at="2024-02-12T07:27:08 IST" duration-ms="7786">
-      <class name="testscripts.ManageSlidersTest">
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscripts.ManageSlidersTest@169bb4dd]" started-at="2024-02-12T07:27:00 IST" name="initializeBrowser" finished-at="2024-02-12T07:27:03 IST" duration-ms="2683" status="PASS">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscripts.ManageOfferCodeTest@169bb4dd]" started-at="2024-02-12T11:04:34 IST" name="initializeBrowser" finished-at="2024-02-12T11:04:36 IST" duration-ms="1408" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -116,21 +93,33 @@ at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(Zip
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method retried="true" signature="verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders()[pri:0, instance:testscripts.ManageSlidersTest@169bb4dd]" started-at="2024-02-12T07:27:03 IST" name="verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders" description="user is able to upload an image and a link to the list sliders" finished-at="2024-02-12T07:27:03 IST" duration-ms="108" status="SKIP">
-          <exception class="java.lang.NullPointerException">
+        <test-method retried="true" signature="verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage()[pri:0, instance:testscripts.ManageOfferCodeTest@169bb4dd]" started-at="2024-02-12T11:04:36 IST" name="verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage" description="Verify whether the user is able to add a new offer code in the manage offer code page" finished-at="2024-02-12T11:04:38 IST" duration-ms="2167" status="SKIP">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Cannot invoke "org.apache.poi.xssf.usermodel.XSSFWorkbook.getSheet(String)" because "utilities.ExcelUtility.wb" is null]]>
+              <![CDATA[User is not able to add a new promo code in the manage offer code page expected [×
+Alert!
+Offer Code already exists.] but found [×
+Alert!
+Offer Created Successfully]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFWorkbook.getSheet(String)" because "utilities.ExcelUtility.wb" is null
-at utilities.ExcelUtility.getString(ExcelUtility.java:31)
-at testscripts.ManageSlidersTest.verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders(ManageSlidersTest.java:17)
+              <![CDATA[java.lang.AssertionError: User is not able to add a new promo code in the manage offer code page expected [×
+Alert!
+Offer Code already exists.] but found [×
+Alert!
+Offer Created Successfully]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at testscripts.ManageOfferCodeTest.verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage(ManageOfferCodeTest.java:51)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
 at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:248)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
 at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
@@ -139,30 +128,36 @@ at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 at org.testng.TestRunner.privateRun(TestRunner.java:848)
 at org.testng.TestRunner.run(TestRunner.java:621)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1623)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.ManageSlidersTest@169bb4dd]" started-at="2024-02-12T07:27:03 IST" name="driverQuit" finished-at="2024-02-12T07:27:03 IST" duration-ms="155" status="PASS">
+        </test-method> <!-- verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.ManageOfferCodeTest@169bb4dd]" started-at="2024-02-12T11:04:38 IST" name="driverQuit" finished-at="2024-02-12T11:04:38 IST" duration-ms="77" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders status=SKIP method=ManageSlidersTest.verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders()[pri:0, instance:testscripts.ManageSlidersTest@169bb4dd] output={null}]]]>
+                <![CDATA[[TestResult name=verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage status=SKIP method=ManageOfferCodeTest.verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage()[pri:0, instance:testscripts.ManageOfferCodeTest@169bb4dd] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscripts.ManageSlidersTest@169bb4dd]" started-at="2024-02-12T07:27:03 IST" name="initializeBrowser" finished-at="2024-02-12T07:27:05 IST" duration-ms="1785" status="PASS">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscripts.ManageOfferCodeTest@169bb4dd]" started-at="2024-02-12T11:04:38 IST" name="initializeBrowser" finished-at="2024-02-12T11:04:39 IST" duration-ms="1464" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -173,22 +168,71 @@ at java.base/java.lang.Thread.run(Thread.java:1623)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders()[pri:0, instance:testscripts.ManageSlidersTest@169bb4dd]" started-at="2024-02-12T07:27:05 IST" name="verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders" description="user is able to upload an image and a link to the list sliders" finished-at="2024-02-12T07:27:07 IST" duration-ms="2839" status="PASS">
+        <test-method signature="verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage()[pri:0, instance:testscripts.ManageOfferCodeTest@169bb4dd]" started-at="2024-02-12T11:04:39 IST" name="verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage" description="Verify whether the user is able to add a new offer code in the manage offer code page" finished-at="2024-02-12T11:04:41 IST" duration-ms="1954" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[User is not able to add a new promo code in the manage offer code page expected [×
+Alert!
+Offer Code already exists.] but found [×
+Alert!
+Offer Created Successfully]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: User is not able to add a new promo code in the manage offer code page expected [×
+Alert!
+Offer Code already exists.] but found [×
+Alert!
+Offer Created Successfully]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at testscripts.ManageOfferCodeTest.verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage(ManageOfferCodeTest.java:51)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:248)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.ManageSlidersTest@169bb4dd]" started-at="2024-02-12T07:27:07 IST" name="driverQuit" finished-at="2024-02-12T07:27:08 IST" duration-ms="173" status="PASS">
+        </test-method> <!-- verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.ManageOfferCodeTest@169bb4dd]" started-at="2024-02-12T11:04:41 IST" name="driverQuit" finished-at="2024-02-12T11:04:42 IST" duration-ms="265" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders status=SUCCESS method=ManageSlidersTest.verifyThatUserIsAbleToUploadAnImageAndLinkToListSliders()[pri:0, instance:testscripts.ManageSlidersTest@169bb4dd] output={null}]]]>
+                <![CDATA[[TestResult name=verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage status=FAILURE method=ManageOfferCodeTest.verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage()[pri:0, instance:testscripts.ManageOfferCodeTest@169bb4dd] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-      </class> <!-- testscripts.ManageSlidersTest -->
-    </test> <!-- ChromeTest -->
-  </suite> <!-- MultiBrowsing -->
+      </class> <!-- testscripts.ManageOfferCodeTest -->
+    </test> <!-- Test -->
+  </suite> <!-- SingleBrowsing -->
 </testng-results>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results retried="2" ignored="2" total="5" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-12T11:04:30 IST" name="SingleBrowsing" finished-at="2024-02-12T11:04:42 IST" duration-ms="11910">
+  <suite started-at="2024-02-12T12:10:24 IST" name="SingleBrowsing" finished-at="2024-02-12T12:10:31 IST" duration-ms="6534">
     <groups>
     </groups>
-    <test started-at="2024-02-12T11:04:30 IST" name="Test" finished-at="2024-02-12T11:04:42 IST" duration-ms="11910">
-      <class name="testscripts.ManageOfferCodeTest">
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscripts.ManageOfferCodeTest@169bb4dd]" started-at="2024-02-12T11:04:30 IST" name="initializeBrowser" finished-at="2024-02-12T11:04:32 IST" duration-ms="1841" status="PASS">
+    <test started-at="2024-02-12T12:10:24 IST" name="Test" finished-at="2024-02-12T12:10:31 IST" duration-ms="6534">
+      <class name="testscripts.ManageOrdersTest">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscripts.ManageOrdersTest@169bb4dd]" started-at="2024-02-12T12:10:24 IST" name="initializeBrowser" finished-at="2024-02-12T12:10:27 IST" duration-ms="2815" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,221 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method retried="true" signature="verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage()[pri:0, instance:testscripts.ManageOfferCodeTest@169bb4dd]" started-at="2024-02-12T11:04:32 IST" name="verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage" description="Verify whether the user is able to add a new offer code in the manage offer code page" finished-at="2024-02-12T11:04:34 IST" duration-ms="2579" status="SKIP">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[User is not able to add a new promo code in the manage offer code page expected [×
-Alert!
-Offer Code already exists.] but found [×
-Alert!
-Offer Created Successfully]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: User is not able to add a new promo code in the manage offer code page expected [×
-Alert!
-Offer Code already exists.] but found [×
-Alert!
-Offer Created Successfully]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at testscripts.ManageOfferCodeTest.verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage(ManageOfferCodeTest.java:51)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="verifyThatTheUserCanSeeTheOrderDetailsInTheManageOrdersPage()[pri:0, instance:testscripts.ManageOrdersTest@169bb4dd]" started-at="2024-02-12T12:10:27 IST" name="verifyThatTheUserCanSeeTheOrderDetailsInTheManageOrdersPage" description="Verify that the user can see the order details in the manage order page" finished-at="2024-02-12T12:10:31 IST" duration-ms="3585" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.ManageOfferCodeTest@169bb4dd]" started-at="2024-02-12T11:04:34 IST" name="driverQuit" finished-at="2024-02-12T11:04:34 IST" duration-ms="111" status="PASS">
+        </test-method> <!-- verifyThatTheUserCanSeeTheOrderDetailsInTheManageOrdersPage -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.ManageOrdersTest@169bb4dd]" started-at="2024-02-12T12:10:31 IST" name="driverQuit" finished-at="2024-02-12T12:10:31 IST" duration-ms="105" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage status=SKIP method=ManageOfferCodeTest.verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage()[pri:0, instance:testscripts.ManageOfferCodeTest@169bb4dd] output={null}]]]>
+                <![CDATA[[TestResult name=verifyThatTheUserCanSeeTheOrderDetailsInTheManageOrdersPage status=SUCCESS method=ManageOrdersTest.verifyThatTheUserCanSeeTheOrderDetailsInTheManageOrdersPage()[pri:0, instance:testscripts.ManageOrdersTest@169bb4dd] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscripts.ManageOfferCodeTest@169bb4dd]" started-at="2024-02-12T11:04:34 IST" name="initializeBrowser" finished-at="2024-02-12T11:04:36 IST" duration-ms="1408" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method retried="true" signature="verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage()[pri:0, instance:testscripts.ManageOfferCodeTest@169bb4dd]" started-at="2024-02-12T11:04:36 IST" name="verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage" description="Verify whether the user is able to add a new offer code in the manage offer code page" finished-at="2024-02-12T11:04:38 IST" duration-ms="2167" status="SKIP">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[User is not able to add a new promo code in the manage offer code page expected [×
-Alert!
-Offer Code already exists.] but found [×
-Alert!
-Offer Created Successfully]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: User is not able to add a new promo code in the manage offer code page expected [×
-Alert!
-Offer Code already exists.] but found [×
-Alert!
-Offer Created Successfully]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at testscripts.ManageOfferCodeTest.verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage(ManageOfferCodeTest.java:51)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:248)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.ManageOfferCodeTest@169bb4dd]" started-at="2024-02-12T11:04:38 IST" name="driverQuit" finished-at="2024-02-12T11:04:38 IST" duration-ms="77" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage status=SKIP method=ManageOfferCodeTest.verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage()[pri:0, instance:testscripts.ManageOfferCodeTest@169bb4dd] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscripts.ManageOfferCodeTest@169bb4dd]" started-at="2024-02-12T11:04:38 IST" name="initializeBrowser" finished-at="2024-02-12T11:04:39 IST" duration-ms="1464" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage()[pri:0, instance:testscripts.ManageOfferCodeTest@169bb4dd]" started-at="2024-02-12T11:04:39 IST" name="verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage" description="Verify whether the user is able to add a new offer code in the manage offer code page" finished-at="2024-02-12T11:04:41 IST" duration-ms="1954" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[User is not able to add a new promo code in the manage offer code page expected [×
-Alert!
-Offer Code already exists.] but found [×
-Alert!
-Offer Created Successfully]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: User is not able to add a new promo code in the manage offer code page expected [×
-Alert!
-Offer Code already exists.] but found [×
-Alert!
-Offer Created Successfully]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at testscripts.ManageOfferCodeTest.verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage(ManageOfferCodeTest.java:51)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:248)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.ManageOfferCodeTest@169bb4dd]" started-at="2024-02-12T11:04:41 IST" name="driverQuit" finished-at="2024-02-12T11:04:42 IST" duration-ms="265" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage status=FAILURE method=ManageOfferCodeTest.verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage()[pri:0, instance:testscripts.ManageOfferCodeTest@169bb4dd] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverQuit -->
-      </class> <!-- testscripts.ManageOfferCodeTest -->
+      </class> <!-- testscripts.ManageOrdersTest -->
     </test> <!-- Test -->
   </suite> <!-- SingleBrowsing -->
 </testng-results>

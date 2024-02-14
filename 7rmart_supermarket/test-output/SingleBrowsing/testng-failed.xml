@@ -7,13 +7,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testscripts.ManageOfferCodeTest">
+      <class name="testscripts.ManageOrdersTest">
         <methods>
-          <include name="verifyWhetherTheUserIsAbleToAddANewOfferCodeInTheManageOfferCodePage"/>
           <include name="initializeBrowser"/>
+          <include name="verifyThatTheUserCanSeeTheOrderDetailsInTheManageOrdersPage"/>
           <include name="driverQuit"/>
         </methods>
-      </class> <!-- testscripts.ManageOfferCodeTest -->
+      </class> <!-- testscripts.ManageOrdersTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [SingleBrowsing] -->

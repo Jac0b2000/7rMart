@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results retried="2" ignored="2" total="6" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-12T12:10:24 IST" name="SingleBrowsing" finished-at="2024-02-12T12:10:31 IST" duration-ms="6534">
+  <suite started-at="2024-02-14T08:02:25 IST" name="ParallelClassTesting" finished-at="2024-02-14T08:02:33 IST" duration-ms="7785">
     <groups>
+      <group name="smoke">
+        <method signature="ManageDeliveryBoyTest.verifyWhenUserSearchDeliveryBoyUsingCredentialsItDisplaysDetailsOfCorrespondingDeliveryBoy()[pri:0, instance:testscripts.ManageDeliveryBoyTest@1e16c0aa]" name="verifyWhenUserSearchDeliveryBoyUsingCredentialsItDisplaysDetailsOfCorrespondingDeliveryBoy" class="testscripts.ManageDeliveryBoyTest"/>
+      </group> <!-- smoke -->
     </groups>
-    <test started-at="2024-02-12T12:10:24 IST" name="Test" finished-at="2024-02-12T12:10:31 IST" duration-ms="6534">
-      <class name="testscripts.ManageOrdersTest">
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscripts.ManageOrdersTest@169bb4dd]" started-at="2024-02-12T12:10:24 IST" name="initializeBrowser" finished-at="2024-02-12T12:10:27 IST" duration-ms="2815" status="PASS">
+    <test started-at="2024-02-14T08:02:25 IST" name="Test" finished-at="2024-02-14T08:02:33 IST" duration-ms="7785">
+      <class name="testscripts.ManageDeliveryBoyTest">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscripts.ManageDeliveryBoyTest@1e16c0aa]" started-at="2024-02-14T08:02:25 IST" name="initializeBrowser" finished-at="2024-02-14T08:02:28 IST" duration-ms="2343" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,22 +21,161 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyThatTheUserCanSeeTheOrderDetailsInTheManageOrdersPage()[pri:0, instance:testscripts.ManageOrdersTest@169bb4dd]" started-at="2024-02-12T12:10:27 IST" name="verifyThatTheUserCanSeeTheOrderDetailsInTheManageOrdersPage" description="Verify that the user can see the order details in the manage order page" finished-at="2024-02-12T12:10:31 IST" duration-ms="3585" status="PASS">
+        <test-method retried="true" signature="verifyWhenUserSearchDeliveryBoyUsingCredentialsItDisplaysDetailsOfCorrespondingDeliveryBoy()[pri:0, instance:testscripts.ManageDeliveryBoyTest@1e16c0aa]" started-at="2024-02-14T08:02:28 IST" name="verifyWhenUserSearchDeliveryBoyUsingCredentialsItDisplaysDetailsOfCorrespondingDeliveryBoy" description="Verify wether the user can find corresponding delivery boy details by entering credentials of that delivery boy" finished-at="2024-02-14T08:02:28 IST" duration-ms="85" status="SKIP">
+          <exception class="org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException">
+            <message>
+              <![CDATA[No valid entries or contents found, this is not a valid OOXML (Office Open XML) file]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
+at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:156)
+at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.<init>(ZipInputStreamZipEntrySource.java:94)
+at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:132)
+at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
+at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:290)
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286)
+at utilities.ExcelUtility.getString(ExcelUtility.java:26)
+at testscripts.ManageDeliveryBoyTest.verifyWhenUserSearchDeliveryBoyUsingCredentialsItDisplaysDetailsOfCorrespondingDeliveryBoy(ManageDeliveryBoyTest.java:17)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: java.util.zip.ZipException: Unexpected record signature: 0X1B6FD61D
+at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.getNextZipEntry(ZipArchiveInputStream.java:296)
+at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:152)
+... 21 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyThatTheUserCanSeeTheOrderDetailsInTheManageOrdersPage -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.ManageOrdersTest@169bb4dd]" started-at="2024-02-12T12:10:31 IST" name="driverQuit" finished-at="2024-02-12T12:10:31 IST" duration-ms="105" status="PASS">
+        </test-method> <!-- verifyWhenUserSearchDeliveryBoyUsingCredentialsItDisplaysDetailsOfCorrespondingDeliveryBoy -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.ManageDeliveryBoyTest@1e16c0aa]" started-at="2024-02-14T08:02:28 IST" name="driverQuit" finished-at="2024-02-14T08:02:28 IST" duration-ms="133" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyThatTheUserCanSeeTheOrderDetailsInTheManageOrdersPage status=SUCCESS method=ManageOrdersTest.verifyThatTheUserCanSeeTheOrderDetailsInTheManageOrdersPage()[pri:0, instance:testscripts.ManageOrdersTest@169bb4dd] output={null}]]]>
+                <![CDATA[[TestResult name=verifyWhenUserSearchDeliveryBoyUsingCredentialsItDisplaysDetailsOfCorrespondingDeliveryBoy status=SKIP method=ManageDeliveryBoyTest.verifyWhenUserSearchDeliveryBoyUsingCredentialsItDisplaysDetailsOfCorrespondingDeliveryBoy()[pri:0, instance:testscripts.ManageDeliveryBoyTest@1e16c0aa] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-      </class> <!-- testscripts.ManageOrdersTest -->
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscripts.ManageDeliveryBoyTest@1e16c0aa]" started-at="2024-02-14T08:02:28 IST" name="initializeBrowser" finished-at="2024-02-14T08:02:30 IST" duration-ms="1949" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeBrowser -->
+        <test-method signature="verifyWhenUserSearchDeliveryBoyUsingCredentialsItDisplaysDetailsOfCorrespondingDeliveryBoy()[pri:0, instance:testscripts.ManageDeliveryBoyTest@1e16c0aa]" started-at="2024-02-14T08:02:30 IST" name="verifyWhenUserSearchDeliveryBoyUsingCredentialsItDisplaysDetailsOfCorrespondingDeliveryBoy" description="Verify wether the user can find corresponding delivery boy details by entering credentials of that delivery boy" finished-at="2024-02-14T08:02:32 IST" duration-ms="1858" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWhenUserSearchDeliveryBoyUsingCredentialsItDisplaysDetailsOfCorrespondingDeliveryBoy -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.ManageDeliveryBoyTest@1e16c0aa]" started-at="2024-02-14T08:02:32 IST" name="driverQuit" finished-at="2024-02-14T08:02:32 IST" duration-ms="95" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyWhenUserSearchDeliveryBoyUsingCredentialsItDisplaysDetailsOfCorrespondingDeliveryBoy status=SUCCESS method=ManageDeliveryBoyTest.verifyWhenUserSearchDeliveryBoyUsingCredentialsItDisplaysDetailsOfCorrespondingDeliveryBoy()[pri:0, instance:testscripts.ManageDeliveryBoyTest@1e16c0aa] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+      </class> <!-- testscripts.ManageDeliveryBoyTest -->
+      <class name="testscripts.MenuTest">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscripts.MenuTest@3aa078fd]" started-at="2024-02-14T08:02:25 IST" name="initializeBrowser" finished-at="2024-02-14T08:02:28 IST" duration-ms="2373" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeBrowser -->
+        <test-method retried="true" signature="verifyThatWhenClickedOnMenuItemsNavigatesToTheCorrespondingPage()[pri:0, instance:testscripts.MenuTest@3aa078fd]" started-at="2024-02-14T08:02:28 IST" name="verifyThatWhenClickedOnMenuItemsNavigatesToTheCorrespondingPage" description="Verify wether the user can navigate to the corresponding menu items on clicking" finished-at="2024-02-14T08:02:28 IST" duration-ms="79" status="SKIP">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.apache.poi.xssf.usermodel.XSSFWorkbook.getSheet(String)" because "utilities.ExcelUtility.wb" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFWorkbook.getSheet(String)" because "utilities.ExcelUtility.wb" is null
+at utilities.ExcelUtility.getString(ExcelUtility.java:31)
+at testscripts.MenuTest.verifyThatWhenClickedOnMenuItemsNavigatesToTheCorrespondingPage(MenuTest.java:15)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1623)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyThatWhenClickedOnMenuItemsNavigatesToTheCorrespondingPage -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.MenuTest@3aa078fd]" started-at="2024-02-14T08:02:28 IST" name="driverQuit" finished-at="2024-02-14T08:02:28 IST" duration-ms="117" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyThatWhenClickedOnMenuItemsNavigatesToTheCorrespondingPage status=SKIP method=MenuTest.verifyThatWhenClickedOnMenuItemsNavigatesToTheCorrespondingPage()[pri:0, instance:testscripts.MenuTest@3aa078fd] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscripts.MenuTest@3aa078fd]" started-at="2024-02-14T08:02:28 IST" name="initializeBrowser" finished-at="2024-02-14T08:02:30 IST" duration-ms="1843" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeBrowser -->
+        <test-method signature="verifyThatWhenClickedOnMenuItemsNavigatesToTheCorrespondingPage()[pri:0, instance:testscripts.MenuTest@3aa078fd]" started-at="2024-02-14T08:02:30 IST" name="verifyThatWhenClickedOnMenuItemsNavigatesToTheCorrespondingPage" description="Verify wether the user can navigate to the corresponding menu items on clicking" finished-at="2024-02-14T08:02:33 IST" duration-ms="3229" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyThatWhenClickedOnMenuItemsNavigatesToTheCorrespondingPage -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.MenuTest@3aa078fd]" started-at="2024-02-14T08:02:33 IST" name="driverQuit" finished-at="2024-02-14T08:02:33 IST" duration-ms="103" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyThatWhenClickedOnMenuItemsNavigatesToTheCorrespondingPage status=SUCCESS method=MenuTest.verifyThatWhenClickedOnMenuItemsNavigatesToTheCorrespondingPage()[pri:0, instance:testscripts.MenuTest@3aa078fd] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+      </class> <!-- testscripts.MenuTest -->
     </test> <!-- Test -->
-  </suite> <!-- SingleBrowsing -->
+  </suite> <!-- ParallelClassTesting -->
 </testng-results>

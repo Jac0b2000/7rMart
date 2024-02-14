@@ -12,7 +12,7 @@ import utilities.ExcelUtility;
 
 public class ManageDeliveryBoyTest extends Base {
 		
-	@Test(retryAnalyzer = Retry.class, description = "Verify wether the user can find corresponding delivery boy details by entering credentials of that delivery boy")
+	@Test(retryAnalyzer = Retry.class, description = "Verify wether the user can find corresponding delivery boy details by entering credentials of that delivery boy", groups = {"smoke"})
 	public void verifyWhenUserSearchDeliveryBoyUsingCredentialsItDisplaysDetailsOfCorrespondingDeliveryBoy() {
 		String username = ExcelUtility.getString(1, 0, "LoginPage");
 		String password = ExcelUtility.getString(1, 1, "LoginPage");

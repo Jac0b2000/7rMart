@@ -11,7 +11,7 @@ import utilities.RandomUtilty;
 
 public class LoginTest extends Base {
 	RandomUtilty randomutility;
-	@Test(retryAnalyzer = Retry.class, description ="Verify wether the user is able to login with valid credentials")
+	@Test(priority = 1, retryAnalyzer = Retry.class, description ="Verify wether the user is able to login with valid credentials", groups = {"regression"})
 	public void verifyWhetherUserCanLoginUsingBothValidCredentials() {
 		String userName = ExcelUtility.getString(1, 0, "LoginPage");
 		String passWord = ExcelUtility.getString(1, 1, "LoginPage");
@@ -24,7 +24,7 @@ public class LoginTest extends Base {
 		boolean isHomePageDisplayed = loginpage.isSettingsButtonAvailable();
 		assertTrue(isHomePageDisplayed, "User is unable to login with both valid credentials");
 	}
-	@Test(retryAnalyzer = Retry.class, description ="Verify wether the user is not able to login with valid username but invalid password")
+	@Test(priority = 2, retryAnalyzer = Retry.class, description ="Verify wether the user is not able to login with valid username but invalid password", groups = {"regression"})
 	public void VerifyWhetherUserCanLoginUsingValidUsernameButInvalidPassword() {
 		randomutility = new RandomUtilty();
 		String userName = ExcelUtility.getString(1, 0, "LoginPage");
@@ -38,7 +38,7 @@ public class LoginTest extends Base {
 		boolean isAlertPopupDisplayed = loginpage.isAlertPopupDisplayed();
 		assertTrue(isAlertPopupDisplayed, "User is able to login with valid username But Invalid Password");
 	}
-	@Test(retryAnalyzer = Retry.class, description ="Verify wether the user is not able to login with invalid username but valid password")
+	@Test(priority = 3, retryAnalyzer = Retry.class, description ="Verify wether the user is not able to login with invalid username but valid password")
 	public void VerifyWhetherUserCanLoginUsingInvalidUsernameButValidPassword() {
 		randomutility = new RandomUtilty();
 		String userName = randomutility.username();

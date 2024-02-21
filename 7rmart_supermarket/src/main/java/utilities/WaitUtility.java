@@ -26,6 +26,7 @@ public class WaitUtility {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
 		wait.until(ExpectedConditions.visibilityOf(target));
 	}
+
 	public void ExplicitWaitForElement(WebDriver driver, WebElement element) 
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));

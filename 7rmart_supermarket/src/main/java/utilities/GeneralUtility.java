@@ -11,6 +11,9 @@ public class GeneralUtility {
 			System.getProperty("user.dir")+ "\\src\\main\\resources\\iphone_MobileSlider.png";
 	public static final String ICECREAM_IMG = 
 			System.getProperty("user.dir")+ "\\src\\main\\resources\\icecream_ManageExpense.jpg";
+	public static final String CONFIG_FILE =
+			System.getProperty("user.dir")+ "\\src\\main\\resources\\Config.properties";
 }
+
 
 
